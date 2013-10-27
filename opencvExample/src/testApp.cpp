@@ -1,10 +1,18 @@
 #include "testApp.h"
 
+/*
+ Camera: ps3 eye
+ 640 x 480 at 60 frames/second
+ 320 x 240 at 120 frames/second
+ */
+
 //--------------------------------------------------------------
 void testApp::setup(){
 
 	#ifdef _USE_LIVE_VIDEO
         vidGrabber.setVerbose(true);
+        vidGrabber.setDeviceID(1); //MacBook Pro Camera:0, USB Camera:1
+        vidGrabber.setDesiredFrameRate(60);
         vidGrabber.initGrabber(320,240);
 	#else
         vidPlayer.loadMovie("fingers.mov");

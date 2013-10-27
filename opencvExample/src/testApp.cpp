@@ -15,7 +15,7 @@ void testApp::setup(){
         vidGrabber.setDesiredFrameRate(60);
         vidGrabber.initGrabber(320,240);
 	#else
-        vidPlayer.loadMovie("fingers.mov");
+        vidPlayer.loadMovie("Eye_Med_Movement_Lights.mov");
         vidPlayer.play();
 	#endif
 

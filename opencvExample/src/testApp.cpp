@@ -24,8 +24,6 @@ void testApp::setup(){
 
     colorImg.allocate(width,height);
 	grayImage.allocate(width,height);
-	grayBg.allocate(width,height);
-	grayDiff.allocate(width,height);
 
 	bLearnBakground = true;
 	threshold = 80;
@@ -57,18 +55,13 @@ void testApp::update(){
         
         colorImg.resize(window_width,window_height);
         grayImage.resize(window_width,window_height);
-        grayBg.resize(window_width,window_height);
-        grayDiff.resize(window_width,window_height);
+
         
         
         grayImage = colorImg;
-		if (bLearnBakground == true){
-			grayBg = grayImage;		// the = sign copys the pixels from grayImage into grayBg (operator overloading)
-			bLearnBakground = false;
-		}
 
-		// take the abs value of the difference between background and incoming and then threshold:
-		//grayDiff.absDiff(grayBg, grayImage);
+
+
         grayImage.threshold(threshold);
 		//grayImage.adaptiveThreshold(threshold);
 
@@ -84,21 +77,21 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 
+    int window_boarder=20;
+    
+	// draw the incoming, the grayscale
+	
+    ofSetHexColor(0xffffff);
+    
+	colorImg.draw(window_boarder,window_boarder);
+	grayImage.draw(window_width+window_boarder*2,window_boarder);
 
-    
-	// draw the incoming, the grayscale, the bg and the thresholded difference
-	ofSetHexColor(0xffffff);
-    
-	colorImg.draw(20,20);
-	grayImage.draw(window_width+40,20);
-	//grayBg.draw(20,window_height+40);
-	//grayDiff.draw(window_width+40,window_height+40);
 
 	// then draw the contours:
 
 	ofFill();
 	ofSetHexColor(0x333333);
-	ofRect(window_width+40,window_height+300,window_width,window_height);
+	ofRect(window_width+window_boarder*2,window_height+window_boarder*2,window_width,window_height);
 	ofSetHexColor(0xffffff);
 
 	// we could draw the whole contour finder
@@ -107,25 +100,23 @@ void testApp::draw(){
 	// or, instead we can draw each blob individually from the blobs vector,
 	// this is how to get access to them:
     for (int i = 0; i < contourFinder.nBlobs; i++){
-        contourFinder.blobs[i].draw(window_width+40,window_height+300);
+        contourFinder.blobs[i].draw(window_width+window_boarder*2,window_height+window_boarder*2);
 		
 		// draw over the centroid if the blob is a hole
 		ofSetColor(255);
 		if(contourFinder.blobs[i].hole){
 			ofDrawBitmapString("hole",
-				contourFinder.blobs[i].boundingRect.getCenter().x + window_width+40,
-				contourFinder.blobs[i].boundingRect.getCenter().y + window_height+300);
+				contourFinder.blobs[i].boundingRect.getCenter().x + window_width+window_boarder*2,
+				contourFinder.blobs[i].boundingRect.getCenter().y + window_height+window_boarder*2);
 		}
     }
 
 	// finally, a report:
 	ofSetHexColor(0xffffff);
 	stringstream reportStr;
-	reportStr << "bg subtraction and blob detection" << endl
-			  << "press ' ' to capture bg" << endl
-			  << "threshold " << threshold << " (press: +/-)" << endl
+	reportStr << "threshold " << threshold << " (press: +/-)" << endl
 			  << "num blobs found " << contourFinder.nBlobs << ", fps: " << ofGetFrameRate();
-	ofDrawBitmapString(reportStr.str(), 20, 600);
+	ofDrawBitmapString(reportStr.str(), window_boarder, window_height*3/2+window_boarder*2);
 
 }
 

@@ -33,8 +33,8 @@ class testApp : public ofBaseApp{
         ofxCvColorImage			colorImg;
 
         ofxCvGrayscaleImage 	grayImage;
-		ofxCvGrayscaleImage 	grayBg;
-		ofxCvGrayscaleImage 	grayDiff;
+		//ofxCvGrayscaleImage 	grayBg;
+		//ofxCvGrayscaleImage 	grayDiff;
 
         ofxCvContourFinder 	contourFinder;
 

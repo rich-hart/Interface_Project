@@ -55,12 +55,8 @@ void testApp::update(){
         
         colorImg.resize(window_width,window_height);
         grayImage.resize(window_width,window_height);
-
-        
         
         grayImage = colorImg;
-
-
 
         grayImage.threshold(threshold);
 		//grayImage.adaptiveThreshold(threshold);

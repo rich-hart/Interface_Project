@@ -52,6 +52,8 @@ void testApp::draw(){
 
 	//videoTexture.draw(20+camWidth,20,camWidth,camHeight);
     vidPlayer.draw(20+camWidth,20,camWidth,camHeight);
+    
+    
 }
 
 //--------------------------------------------------------------

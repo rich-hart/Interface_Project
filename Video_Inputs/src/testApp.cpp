@@ -11,16 +11,16 @@ void testApp::setup(){
     vidGrabber.setDesiredFrameRate(30);
     vidGrabber.initGrabber(camWidth,camHeight);
 
-    videoInverted 	= new unsigned char[camWidth*camHeight*3];
-	videoTexture.allocate(camWidth,camHeight, GL_RGB);
+    //videoInverted 	= new unsigned char[camWidth*camHeight*3];
+	//videoTexture.allocate(camWidth,camHeight, GL_RGB);
 	ofSetVerticalSync(true);
     
     
     
     
     
-    //vidPlayer.loadMovie("Eye_Med_Movement_Lights.mov");
-    //vidPlayer.play();
+    vidPlayer.loadMovie("EyeCaptureSamples/Eye_Med_Movement_Lights.mov");
+    vidPlayer.play();
 
 
 }
@@ -31,6 +31,7 @@ void testApp::update(){
     ofBackground(100,100,100);
 	
 	vidGrabber.update();
+    vidPlayer.update();
 	/*
 	if (vidGrabber.isFrameNew()){
 		int totalPixels = camWidth*camHeight*3;
@@ -48,7 +49,9 @@ void testApp::update(){
 void testApp::draw(){
 	ofSetHexColor(0xffffff);
 	vidGrabber.draw(20,20);
+
 	//videoTexture.draw(20+camWidth,20,camWidth,camHeight);
+    vidPlayer.draw(20+camWidth,20,camWidth,camHeight);
 }
 
 //--------------------------------------------------------------

@@ -100,6 +100,16 @@ void testApp::update(){
     
     
     if (vidPlayer.isFrameNew()){
+        /*Rotate Image*/
+        unsigned char *p =  vidPlayer.getPixels();
+        int n = width*height*3;
+        for (int i=0; i<n/2; i+=3) {
+            swap(p[i+0],p[n-i-3]);
+            swap(p[i+1],p[n-i-2]);
+            swap(p[i+2],p[n-i-1]);
+        }
+        /*Detect Pupil*/
+        
         colorImage_Player.setFromPixels(vidPlayer.getPixels(), width,height);
         
         colorImage_Player.resize(CAM_WIDTH,CAM_HEIGHT);

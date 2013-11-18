@@ -36,7 +36,27 @@ testApp::~testApp(){
 }
 void testApp::setup(){
 #ifdef _USE_LIVE_VIDEO
-
+    ofSetVerticalSync(true);
+	
+	ofSetLogLevel(OF_LOG_VERBOSE);
+	
+	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = ofxMacamPs3Eye::getDeviceInfoList();
+	
+	for (int i = 0; i < deviceList.size(); i++) {
+		ofxMacamPs3Eye * camera = new ofxMacamPs3Eye();
+		camera->setDeviceID(deviceList[i]->id);
+		camera->setDesiredFrameRate(180);
+		camera->initGrabber(320, 240);
+        
+		cameras.push_back(camera);
+        
+	}
+	
+	if(cameras.size() > 0){
+		ofSetWindowShape(320 * cameras.size(), 240);
+	}
+    
+   #else
     /*Enviroment Camera*/
 	
 	// init video input
@@ -49,9 +69,7 @@ void testApp::setup(){
 	ofSetFrameRate(30);
 	ofBackground(0,0,0);
 	
-	// allocate stuff
-	colorImg.allocate(CAM_WIDTH, CAM_HEIGHT);
-	grayImg.allocate(CAM_WIDTH, CAM_HEIGHT);
+    
     
 	choosing_img = false;
 	chosen_img = false;
@@ -61,14 +79,18 @@ void testApp::setup(){
     
     vidPlayer.loadMovie("EyeCaptureSamples/Eye_Med_Movement_Lights.mov");
     vidPlayer.play();
-    colorImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
-
-    grayImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
+    
     threshold = 80;
 	eye_radius=25;
-   #else
-   
    #endif
+    
+    // allocate stuff
+	colorImg.allocate(CAM_WIDTH, CAM_HEIGHT);
+	grayImg.allocate(CAM_WIDTH, CAM_HEIGHT);
+    colorImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
+    
+    grayImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
+    
     /*
      Eye and enviroment interaction.
      

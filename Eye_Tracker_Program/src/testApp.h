@@ -44,6 +44,8 @@
 #include <ctime>
 #include <math.h>
 
+#include "ofxMacamPs3Eye.h"
+
 const int CAM_WIDTH = 320;
 const int CAM_HEIGHT = 240;
 const int SCREEN_WIDTH = CAM_WIDTH*2;
@@ -72,7 +74,7 @@ class testApp : public ofBaseApp {
 	
     
     /*Enviroment Camera*/
-	ofVideoGrabber			vidGrabber;
+	
 	
 	ofxCvColorImage			colorImg, testImg;
 	ofxCvGrayscaleImage		grayImg, testGrayImg;
@@ -98,7 +100,7 @@ class testApp : public ofBaseApp {
     
     
     /*Eye Movie*/
-        ofVideoPlayer 		vidPlayer;
+    
     ofxCvColorImage			colorImage_Player;
     ofxCvGrayscaleImage 	grayImage_Player;
     int 				threshold;
@@ -106,6 +108,18 @@ class testApp : public ofBaseApp {
     
     
 	clock_t start_selection_time;
+    
+    
+    vector<ofxMacamPs3Eye*> cameras;
+    
+    #ifdef _USE_LIVE_VIDEO
+    ofxMacamPs3Eye vidPlayer;
+    ofxMacamPs3Eye vidGrabber;
+#else  
+    ofVideoPlayer 		vidPlayer;
+    ofVideoGrabber			vidGrabber;
+      #endif
+    
     
 };
 

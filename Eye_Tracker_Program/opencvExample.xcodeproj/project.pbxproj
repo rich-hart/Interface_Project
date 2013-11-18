@@ -10,6 +10,23 @@
 		169d3c72fde6c5590a1616f5 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7b6a03390302d5a2c9f0e4ab /* ofxCvFloatImage.cpp */; };
 		1d5f3298c2fa073628012944 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c76de5c29bdbd2caa1dd0021 /* ofxCvContourFinder.cpp */; };
 		250a95ba26587be85db0a353 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ce9c7160245b19131dae6128 /* ofxCvColorImage.cpp */; };
+		2FC7DF51183AD31400A83F80 /* AGC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF2D183AD31400A83F80 /* AGC.m */; };
+		2FC7DF52183AD31400A83F80 /* BayerConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF2E183AD31400A83F80 /* BayerConverter.m */; };
+		2FC7DF53183AD31400A83F80 /* ControllerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF2F183AD31400A83F80 /* ControllerInterface.m */; };
+		2FC7DF54183AD31400A83F80 /* FrameCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF30183AD31400A83F80 /* FrameCounter.m */; };
+		2FC7DF55183AD31400A83F80 /* GenericDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF31183AD31400A83F80 /* GenericDriver.m */; };
+		2FC7DF56183AD31400A83F80 /* Histogram.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF32183AD31400A83F80 /* Histogram.m */; };
+		2FC7DF57183AD31400A83F80 /* LookUpTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF44183AD31400A83F80 /* LookUpTable.m */; };
+		2FC7DF58183AD31400A83F80 /* MiniGraphicsTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF45183AD31400A83F80 /* MiniGraphicsTools.cpp */; };
+		2FC7DF59183AD31400A83F80 /* MiscTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF46183AD31400A83F80 /* MiscTools.cpp */; };
+		2FC7DF5A183AD31400A83F80 /* MyCameraCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF47183AD31400A83F80 /* MyCameraCentral.m */; };
+		2FC7DF5B183AD31400A83F80 /* MyCameraDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF48183AD31400A83F80 /* MyCameraDriver.m */; };
+		2FC7DF5C183AD31400A83F80 /* MyCameraInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF49183AD31400A83F80 /* MyCameraInfo.m */; };
+		2FC7DF5D183AD31400A83F80 /* OV534Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF4A183AD31400A83F80 /* OV534Driver.m */; };
+		2FC7DF5E183AD31400A83F80 /* Resolvers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF4B183AD31400A83F80 /* Resolvers.cpp */; };
+		2FC7DF5F183AD31400A83F80 /* Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF4C183AD31400A83F80 /* Sensor.m */; };
+		2FC7DF60183AD31400A83F80 /* ofxMacamPs3Eye.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF4E183AD31400A83F80 /* ofxMacamPs3Eye.mm */; };
+		2FC7DF61183AD31400A83F80 /* PS3EyeWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7DF50183AD31400A83F80 /* PS3EyeWindowAppDelegate.m */; };
 		2FDF386F1819795200F2298A /* pkmDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF386D1819795200F2298A /* pkmDetector.cpp */; };
 		63020f16c7e8ded980111241 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c6151136d101f857dae12722 /* ofxCvImage.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
@@ -77,6 +94,42 @@
 		0cf0aa3895d28e97d8a1e4a9 /* ground_truth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ground_truth.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/ground_truth.h; sourceTree = SOURCE_ROOT; };
 		114b872696817cc33990fc83 /* imgproc.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imgproc.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc/imgproc.hpp; sourceTree = SOURCE_ROOT; };
 		1e95efd35ed9c5d97f2f015e /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
+		2FC7DF2A183AD31400A83F80 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FC7DF2D183AD31400A83F80 /* AGC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGC.m; sourceTree = "<group>"; };
+		2FC7DF2E183AD31400A83F80 /* BayerConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayerConverter.m; sourceTree = "<group>"; };
+		2FC7DF2F183AD31400A83F80 /* ControllerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerInterface.m; sourceTree = "<group>"; };
+		2FC7DF30183AD31400A83F80 /* FrameCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCounter.m; sourceTree = "<group>"; };
+		2FC7DF31183AD31400A83F80 /* GenericDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericDriver.m; sourceTree = "<group>"; };
+		2FC7DF32183AD31400A83F80 /* Histogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Histogram.m; sourceTree = "<group>"; };
+		2FC7DF34183AD31400A83F80 /* AGC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGC.h; sourceTree = "<group>"; };
+		2FC7DF35183AD31400A83F80 /* BayerConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BayerConverter.h; sourceTree = "<group>"; };
+		2FC7DF36183AD31400A83F80 /* ControllerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerInterface.h; sourceTree = "<group>"; };
+		2FC7DF37183AD31400A83F80 /* FrameCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameCounter.h; sourceTree = "<group>"; };
+		2FC7DF38183AD31400A83F80 /* GenericDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericDriver.h; sourceTree = "<group>"; };
+		2FC7DF39183AD31400A83F80 /* GlobalDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefs.h; sourceTree = "<group>"; };
+		2FC7DF3A183AD31400A83F80 /* Histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
+		2FC7DF3B183AD31400A83F80 /* LookUpTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookUpTable.h; sourceTree = "<group>"; };
+		2FC7DF3C183AD31400A83F80 /* MiniGraphicsTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniGraphicsTools.h; sourceTree = "<group>"; };
+		2FC7DF3D183AD31400A83F80 /* MiscTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscTools.h; sourceTree = "<group>"; };
+		2FC7DF3E183AD31400A83F80 /* MyCameraCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraCentral.h; sourceTree = "<group>"; };
+		2FC7DF3F183AD31400A83F80 /* MyCameraDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraDriver.h; sourceTree = "<group>"; };
+		2FC7DF40183AD31400A83F80 /* MyCameraInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraInfo.h; sourceTree = "<group>"; };
+		2FC7DF41183AD31400A83F80 /* OV534Driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OV534Driver.h; sourceTree = "<group>"; };
+		2FC7DF42183AD31400A83F80 /* Resolvers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolvers.h; sourceTree = "<group>"; };
+		2FC7DF43183AD31400A83F80 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensor.h; sourceTree = "<group>"; };
+		2FC7DF44183AD31400A83F80 /* LookUpTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookUpTable.m; sourceTree = "<group>"; };
+		2FC7DF45183AD31400A83F80 /* MiniGraphicsTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiniGraphicsTools.cpp; sourceTree = "<group>"; };
+		2FC7DF46183AD31400A83F80 /* MiscTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiscTools.cpp; sourceTree = "<group>"; };
+		2FC7DF47183AD31400A83F80 /* MyCameraCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraCentral.m; sourceTree = "<group>"; };
+		2FC7DF48183AD31400A83F80 /* MyCameraDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraDriver.m; sourceTree = "<group>"; };
+		2FC7DF49183AD31400A83F80 /* MyCameraInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraInfo.m; sourceTree = "<group>"; };
+		2FC7DF4A183AD31400A83F80 /* OV534Driver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OV534Driver.m; sourceTree = "<group>"; };
+		2FC7DF4B183AD31400A83F80 /* Resolvers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resolvers.cpp; sourceTree = "<group>"; };
+		2FC7DF4C183AD31400A83F80 /* Sensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sensor.m; sourceTree = "<group>"; };
+		2FC7DF4D183AD31400A83F80 /* ofxMacamPs3Eye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMacamPs3Eye.h; sourceTree = "<group>"; };
+		2FC7DF4E183AD31400A83F80 /* ofxMacamPs3Eye.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxMacamPs3Eye.mm; sourceTree = "<group>"; };
+		2FC7DF4F183AD31400A83F80 /* PS3EyeWindowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS3EyeWindowAppDelegate.h; sourceTree = "<group>"; };
+		2FC7DF50183AD31400A83F80 /* PS3EyeWindowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PS3EyeWindowAppDelegate.m; sourceTree = "<group>"; };
 		2FDF386D1819795200F2298A /* pkmDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pkmDetector.cpp; sourceTree = "<group>"; };
 		2FDF386E1819795200F2298A /* pkmDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkmDetector.h; sourceTree = "<group>"; };
 		2e411f99e3ab7154484b4f96 /* kmeans_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = kmeans_index.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/kmeans_index.h; sourceTree = SOURCE_ROOT; };
@@ -314,6 +367,74 @@
 			name = flann;
 			sourceTree = "<group>";
 		};
+		2FC7DF29183AD31400A83F80 /* ofxMacamPs3Eye */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7DF2A183AD31400A83F80 /* .gitignore */,
+				2FC7DF2B183AD31400A83F80 /* src */,
+			);
+			name = ofxMacamPs3Eye;
+			path = ../../../addons/ofxMacamPs3Eye;
+			sourceTree = "<group>";
+		};
+		2FC7DF2B183AD31400A83F80 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7DF2C183AD31400A83F80 /* macam */,
+				2FC7DF4D183AD31400A83F80 /* ofxMacamPs3Eye.h */,
+				2FC7DF4E183AD31400A83F80 /* ofxMacamPs3Eye.mm */,
+				2FC7DF4F183AD31400A83F80 /* PS3EyeWindowAppDelegate.h */,
+				2FC7DF50183AD31400A83F80 /* PS3EyeWindowAppDelegate.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2FC7DF2C183AD31400A83F80 /* macam */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7DF2D183AD31400A83F80 /* AGC.m */,
+				2FC7DF2E183AD31400A83F80 /* BayerConverter.m */,
+				2FC7DF2F183AD31400A83F80 /* ControllerInterface.m */,
+				2FC7DF30183AD31400A83F80 /* FrameCounter.m */,
+				2FC7DF31183AD31400A83F80 /* GenericDriver.m */,
+				2FC7DF32183AD31400A83F80 /* Histogram.m */,
+				2FC7DF33183AD31400A83F80 /* include */,
+				2FC7DF44183AD31400A83F80 /* LookUpTable.m */,
+				2FC7DF45183AD31400A83F80 /* MiniGraphicsTools.cpp */,
+				2FC7DF46183AD31400A83F80 /* MiscTools.cpp */,
+				2FC7DF47183AD31400A83F80 /* MyCameraCentral.m */,
+				2FC7DF48183AD31400A83F80 /* MyCameraDriver.m */,
+				2FC7DF49183AD31400A83F80 /* MyCameraInfo.m */,
+				2FC7DF4A183AD31400A83F80 /* OV534Driver.m */,
+				2FC7DF4B183AD31400A83F80 /* Resolvers.cpp */,
+				2FC7DF4C183AD31400A83F80 /* Sensor.m */,
+			);
+			path = macam;
+			sourceTree = "<group>";
+		};
+		2FC7DF33183AD31400A83F80 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7DF34183AD31400A83F80 /* AGC.h */,
+				2FC7DF35183AD31400A83F80 /* BayerConverter.h */,
+				2FC7DF36183AD31400A83F80 /* ControllerInterface.h */,
+				2FC7DF37183AD31400A83F80 /* FrameCounter.h */,
+				2FC7DF38183AD31400A83F80 /* GenericDriver.h */,
+				2FC7DF39183AD31400A83F80 /* GlobalDefs.h */,
+				2FC7DF3A183AD31400A83F80 /* Histogram.h */,
+				2FC7DF3B183AD31400A83F80 /* LookUpTable.h */,
+				2FC7DF3C183AD31400A83F80 /* MiniGraphicsTools.h */,
+				2FC7DF3D183AD31400A83F80 /* MiscTools.h */,
+				2FC7DF3E183AD31400A83F80 /* MyCameraCentral.h */,
+				2FC7DF3F183AD31400A83F80 /* MyCameraDriver.h */,
+				2FC7DF40183AD31400A83F80 /* MyCameraInfo.h */,
+				2FC7DF41183AD31400A83F80 /* OV534Driver.h */,
+				2FC7DF42183AD31400A83F80 /* Resolvers.h */,
+				2FC7DF43183AD31400A83F80 /* Sensor.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		2FDF386C1819795200F2298A /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +523,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				2FC7DF29183AD31400A83F80 /* ofxMacamPs3Eye */,
 				a0b90d3b0adb9c1716816714 /* ofxOpenCv */,
 			);
 			name = addons;
@@ -667,16 +789,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC7DF5A183AD31400A83F80 /* MyCameraCentral.m in Sources */,
+				2FC7DF51183AD31400A83F80 /* AGC.m in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				2FC7DF5E183AD31400A83F80 /* Resolvers.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				2FDF386F1819795200F2298A /* pkmDetector.cpp in Sources */,
+				2FC7DF56183AD31400A83F80 /* Histogram.m in Sources */,
+				2FC7DF5C183AD31400A83F80 /* MyCameraInfo.m in Sources */,
 				fb09c6b2a1da0ea217240cb8 /* ofxCvGrayscaleImage.cpp in Sources */,
+				2FC7DF59183AD31400A83F80 /* MiscTools.cpp in Sources */,
+				2FC7DF53183AD31400A83F80 /* ControllerInterface.m in Sources */,
 				250a95ba26587be85db0a353 /* ofxCvColorImage.cpp in Sources */,
+				2FC7DF52183AD31400A83F80 /* BayerConverter.m in Sources */,
+				2FC7DF58183AD31400A83F80 /* MiniGraphicsTools.cpp in Sources */,
 				169d3c72fde6c5590a1616f5 /* ofxCvFloatImage.cpp in Sources */,
 				d3301f6a0b43bb293ed97c1d /* ofxCvShortImage.cpp in Sources */,
+				2FC7DF55183AD31400A83F80 /* GenericDriver.m in Sources */,
+				2FC7DF57183AD31400A83F80 /* LookUpTable.m in Sources */,
 				1d5f3298c2fa073628012944 /* ofxCvContourFinder.cpp in Sources */,
+				2FC7DF61183AD31400A83F80 /* PS3EyeWindowAppDelegate.m in Sources */,
+				2FC7DF5F183AD31400A83F80 /* Sensor.m in Sources */,
 				e212c821d1064b92dd953a42 /* ofxCvHaarFinder.cpp in Sources */,
+				2FC7DF54183AD31400A83F80 /* FrameCounter.m in Sources */,
+				2FC7DF60183AD31400A83F80 /* ofxMacamPs3Eye.mm in Sources */,
 				63020f16c7e8ded980111241 /* ofxCvImage.cpp in Sources */,
+				2FC7DF5B183AD31400A83F80 /* MyCameraDriver.m in Sources */,
+				2FC7DF5D183AD31400A83F80 /* OV534Driver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

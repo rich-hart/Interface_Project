@@ -275,7 +275,20 @@ void testApp::draw(){
             }
         }
         
+        
     }
+    if(obj_highlight){
+        if(clock()-start_selection_time > CLOCKS_PER_SEC * .25){
+            ofSetColor(200, 20, 50);
+            ofFill();
+            ofCircle(obj_center_x, obj_center_y,5);
+            start_selection_time= clock();
+        }
+    } else{
+        start_selection_time= clock();
+
+    }
+
 
 	
 }

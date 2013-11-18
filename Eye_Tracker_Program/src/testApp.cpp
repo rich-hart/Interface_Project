@@ -174,7 +174,15 @@ void testApp::draw(){
 		
 		ofLine(detector.dst_corners[0].x, detector.dst_corners[0].y,
 			   detector.dst_corners[3].x, detector.dst_corners[3].y);
+        
+        obj_center_x = (detector.dst_corners[0].x +detector.dst_corners[1].x +detector.dst_corners[2].x +detector.dst_corners[3].x
+                        )/4;
+        obj_center_y = (detector.dst_corners[0].y +detector.dst_corners[1].y +detector.dst_corners[2].y +detector.dst_corners[3].y
+                        )/4;
 
+       ofDrawBitmapString("object center", obj_center_x ,obj_center_y);
+        ofFill();		// draw "filled shapes"
+        ofCircle(obj_center_x,obj_center_y,10);
 	}
     
     
@@ -187,16 +195,39 @@ void testApp::draw(){
 	ofSetHexColor(0x333333);
 	ofRect(CAM_WIDTH,CAM_HEIGHT,CAM_WIDTH,CAM_HEIGHT);
 	ofSetHexColor(0xffffff);
-    
+   
+    //below is modified code to find the largest hole in the eye camera.
+    max_blob_index = -1;
+    float max_area = -1;
     for (int i = 0; i < contourFinder.nBlobs; i++){
-        contourFinder.blobs[i].draw(0,0);
-		contourFinder.blobs[i].draw(0,CAM_HEIGHT);
-		// draw over the centroid if the blob is a hole
-		ofSetColor(255);
+        if(max_area<contourFinder.blobs[i].area && contourFinder.blobs[i].hole){
+            max_area=contourFinder.blobs[i].area;
+            max_blob_index=i;
+        }
+    }
+ 
+    
+   // for (int i = max_blob_index; i == max_blob_index; i++){ // this will find the largest whole
+    
+    for (int i = 0; i < contourFinder.nBlobs; i++){  // this will intereate over all the blobs
+        
 		if(contourFinder.blobs[i].hole){
+            contourFinder.blobs[i].draw(0,0);
+            contourFinder.blobs[i].draw(0,CAM_HEIGHT);
+            // draw over the centroid if the blob is a hole
+            ofSetColor(255);
 			ofDrawBitmapString("hole",
                                contourFinder.blobs[i].boundingRect.getCenter().x ,
                                contourFinder.blobs[i].boundingRect.getCenter().y + CAM_HEIGHT);
+            ofDrawBitmapString("eye",
+                               contourFinder.blobs[i].boundingRect.getCenter().x ,
+                               contourFinder.blobs[i].boundingRect.getCenter().y);
+            if(i==max_blob_index){
+             ofNoFill();
+            ofCircle(contourFinder.blobs[i].boundingRect.getCenter().x, contourFinder.blobs[i].boundingRect.getCenter().y,25);
+            }
+            
+            
 		}
         
         

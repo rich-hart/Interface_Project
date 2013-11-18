@@ -76,8 +76,12 @@ class testApp : public ofBaseApp {
 	bool					choosing_img, chosen_img;
 	pkmDetector				detector;
 	int						detection;
-    
-    
+    int                     obj_center_x;
+    int                     obj_center_y;
+    int                     eye_center_x;
+    int                     eye_center_y;
+    int                     max_blob_index;
+    float max_area;
     
     
     /*Eye Movie*/

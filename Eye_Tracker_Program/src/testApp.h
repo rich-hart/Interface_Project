@@ -34,6 +34,7 @@
 
 #include "ofxOpenCv.h"
 #include "ofShader.h"
+#include "ofArduino.h"
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/features2d/features2d.hpp>
@@ -54,8 +55,9 @@ class testApp : public ofBaseApp {
 	void setup();
 	 
 	void update();
+    void DrawEyeVideo();
 	void draw();
-
+    
 	void keyPressed  (int key);
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16D59EE8-3119-4ACA-9DCB-B761A86BD54D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ofApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FA2B64F0-9143-4654-9046-B8E9C8C20E98</key>
+		<string>https://github.com/rich-hart/Interface_Project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>example-empty/ofApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FA2B64F0-9143-4654-9046-B8E9C8C20E98</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rich-hart/Interface_Project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FA2B64F0-9143-4654-9046-B8E9C8C20E98</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FA2B64F0-9143-4654-9046-B8E9C8C20E98</string>
+			<key>IDESourceControlWCCName</key>
+			<string>myApps</string>
+		</dict>
+	</array>
+</dict>
+</plist>

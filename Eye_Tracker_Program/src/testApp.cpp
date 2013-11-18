@@ -27,6 +27,7 @@
  */
 
 #include "testApp.h"
+
 //--------------------------------------------------------------
 
 extern const int width = 640;
@@ -93,11 +94,7 @@ void testApp::update(){
     
     /*Eye Video*/
  
-        vidPlayer.update();
-    
-    
-    
-    
+    vidPlayer.update();
     
     if (vidPlayer.isFrameNew()){
         /*Rotate Image*/
@@ -108,8 +105,8 @@ void testApp::update(){
             swap(p[i+1],p[n-i-2]);
             swap(p[i+2],p[n-i-1]);
         }
-        /*Detect Pupil*/
         
+/*Detect Pupil*/
         colorImage_Player.setFromPixels(vidPlayer.getPixels(), width,height);
         
         colorImage_Player.resize(CAM_WIDTH,CAM_HEIGHT);
@@ -126,7 +123,14 @@ void testApp::update(){
         
         
     }
+    
+    /*Open CV Test*/
+    
+    
 }
+
+
+
 
 //--------------------------------------------------------------
 void testApp::draw(){
@@ -185,16 +189,21 @@ void testApp::draw(){
 	ofSetHexColor(0xffffff);
     
     for (int i = 0; i < contourFinder.nBlobs; i++){
-        contourFinder.blobs[i].draw(CAM_WIDTH,CAM_HEIGHT);
-		
+        contourFinder.blobs[i].draw(0,0);
+		contourFinder.blobs[i].draw(0,CAM_HEIGHT);
 		// draw over the centroid if the blob is a hole
 		ofSetColor(255);
 		if(contourFinder.blobs[i].hole){
 			ofDrawBitmapString("hole",
-                               contourFinder.blobs[i].boundingRect.getCenter().x + CAM_WIDTH,
+                               contourFinder.blobs[i].boundingRect.getCenter().x ,
                                contourFinder.blobs[i].boundingRect.getCenter().y + CAM_HEIGHT);
 		}
+        
+        
+        
+        
     }
+
 	
 }
 

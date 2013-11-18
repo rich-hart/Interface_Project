@@ -38,6 +38,8 @@
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/features2d/features2d.hpp>
+#include <ctime>
+#include <math.h>
 
 const int CAM_WIDTH = 320;
 const int CAM_HEIGHT = 240;
@@ -80,8 +82,14 @@ class testApp : public ofBaseApp {
     int                     obj_center_y;
     int                     eye_center_x;
     int                     eye_center_y;
+    int                     eye_radius;
     int                     max_blob_index;
     float max_area;
+    bool obj_detected;
+    bool eye_detected;
+    bool obj_highlight;
+    
+
     
     
     /*Eye Movie*/
@@ -90,7 +98,10 @@ class testApp : public ofBaseApp {
     ofxCvGrayscaleImage 	grayImage_Player;
     int 				threshold;
        ofxCvContourFinder 	contourFinder;
-	
+    
+    
+	clock_t start_selection_time;
+    
 };
 
 #endif

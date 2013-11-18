@@ -64,7 +64,15 @@ void testApp::setup(){
 
     grayImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
     threshold = 80;
-	
+	eye_radius=25;
+    
+    /*
+     Eye and enviroment interaction.
+     
+     
+     */
+    
+    start_selection_time = clock();
 }
 
 //--------------------------------------------------------------
@@ -154,6 +162,7 @@ void testApp::draw(){
 		
 	}
 	
+    obj_detected= false;
 	if (chosen_img) {
 
 		ofPushMatrix();
@@ -180,13 +189,13 @@ void testApp::draw(){
         obj_center_y = (detector.dst_corners[0].y +detector.dst_corners[1].y +detector.dst_corners[2].y +detector.dst_corners[3].y
                         )/4;
 
-       ofDrawBitmapString("object center", obj_center_x ,obj_center_y);
-        ofFill();		// draw "filled shapes"
-        ofCircle(obj_center_x,obj_center_y,10);
+        obj_detected = true;
+      
 	}
     
     
     /*Eye Video*/
+    eye_detected=false;
     ofSetHexColor(0xffffff);
 	
     colorImage_Player.draw(0,CAM_HEIGHT,CAM_WIDTH,CAM_HEIGHT);
@@ -211,27 +220,60 @@ void testApp::draw(){
     
     for (int i = 0; i < contourFinder.nBlobs; i++){  // this will intereate over all the blobs
         
-		if(contourFinder.blobs[i].hole){
-            contourFinder.blobs[i].draw(0,0);
+		if(contourFinder.blobs[i].hole && i==max_blob_index){
+            //contourFinder.blobs[i].draw(0,0);
             contourFinder.blobs[i].draw(0,CAM_HEIGHT);
             // draw over the centroid if the blob is a hole
             ofSetColor(255);
+            eye_center_x=contourFinder.blobs[i].boundingRect.getCenter().x;
+            eye_center_y=contourFinder.blobs[i].boundingRect.getCenter().y;
 			ofDrawBitmapString("hole",
-                               contourFinder.blobs[i].boundingRect.getCenter().x ,
-                               contourFinder.blobs[i].boundingRect.getCenter().y + CAM_HEIGHT);
-            ofDrawBitmapString("eye",
-                               contourFinder.blobs[i].boundingRect.getCenter().x ,
-                               contourFinder.blobs[i].boundingRect.getCenter().y);
-            if(i==max_blob_index){
-             ofNoFill();
-            ofCircle(contourFinder.blobs[i].boundingRect.getCenter().x, contourFinder.blobs[i].boundingRect.getCenter().y,25);
+                               eye_center_x ,
+                               eye_center_y + CAM_HEIGHT);
+          
+            
+            eye_detected=true;
+            
+        }
+        
+        
+        
+        
+    }
+    
+    obj_highlight= false;
+    if(obj_detected&&eye_detected){
+        
+        obj_highlight = (pow(obj_center_x-eye_center_x,2.0)+pow(obj_center_y-eye_center_y,2.0)<pow(eye_radius,2.0));
+        if(obj_highlight){
+        ofSetColor(255);
+        }
+        else{
+        ofSetColor(200, 20, 50);
+        }
+        ofDrawBitmapString("object center", obj_center_x ,obj_center_y);
+        ofFill();		// draw "filled shapes"
+        ofCircle(obj_center_x,obj_center_y,10);
+        
+        if(obj_highlight){
+            ofSetColor(255);
+        }
+        else{
+           ofSetColor(20,200,200);
+        }
+        
+        for (int i = 0; i < contourFinder.nBlobs; i++){  // this will intereate over all the blobs
+            
+            if(contourFinder.blobs[i].hole && i==max_blob_index){
+        ofDrawBitmapString("eye",
+                           eye_center_x ,
+                           eye_center_y);
+        // if(){
+        ofNoFill();
+        ofCircle(eye_center_x, eye_center_y,eye_radius);
+        //  }
             }
-            
-            
-		}
-        
-        
-        
+        }
         
     }
 

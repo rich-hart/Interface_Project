@@ -35,7 +35,8 @@ extern const int height = 480;
 testApp::~testApp(){
 }
 void testApp::setup(){
-    
+#ifdef _USE_LIVE_VIDEO
+
     /*Enviroment Camera*/
 	
 	// init video input
@@ -65,13 +66,15 @@ void testApp::setup(){
     grayImage_Player.allocate(CAM_WIDTH,CAM_HEIGHT);
     threshold = 80;
 	eye_radius=25;
-    
+   #else
+   
+   #endif
     /*
      Eye and enviroment interaction.
      
      
      */
-    
+    select_time = 3;
     start_selection_time = clock();
 }
 
@@ -278,7 +281,9 @@ void testApp::draw(){
         
     }
     if(obj_highlight){
-        if(clock()-start_selection_time > CLOCKS_PER_SEC * .25){
+        if(clock()-start_selection_time > CLOCKS_PER_SEC * select_time){
+            
+            //INTERACT WITH OBJECT!!!
             ofSetColor(200, 20, 50);
             ofFill();
             ofCircle(obj_center_x, obj_center_y,5);

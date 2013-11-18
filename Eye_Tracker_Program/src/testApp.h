@@ -28,6 +28,9 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
+#define _USE_LIVE_VIDEO  //comment this to use laptop vid and movie
+
+
 #include "ofMain.h"
 
 #include "pkmDetector.h"
@@ -84,6 +87,8 @@ class testApp : public ofBaseApp {
     int                     eye_center_y;
     int                     eye_radius;
     int                     max_blob_index;
+    
+    int select_time;
     float max_area;
     bool obj_detected;
     bool eye_detected;

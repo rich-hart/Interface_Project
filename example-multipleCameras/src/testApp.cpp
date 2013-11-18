@@ -14,6 +14,7 @@ void testApp::setup(){
 		camera->setDesiredFrameRate(180);
 		camera->initGrabber(320, 240);
 		cameras.push_back(camera);
+        
 	}
 	
 	if(cameras.size() > 0){
